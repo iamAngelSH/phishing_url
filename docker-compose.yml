@@ -1,0 +1,10 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  jupyter:
+    build: .
+    # image: angelash/datascience-notebook
+    image: deargle/my-datascience-notebook
+    ports:
+      - "9090:8888"
+    volumes:
+      - .:/home/jovyan/work
