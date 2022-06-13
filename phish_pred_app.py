@@ -129,7 +129,7 @@ def url_prediction():
     with open('phish-model-1653354947.cloudpickle', 'rb') as pickle_file:
         model = pickle.load(pickle_file)
     
-    pred = model.predict(df).tolist()
+    pred = model.predict(df).tolist() 
 
     if 0 in pred:
         t = f'##### {df.domain[0]} is not a PHISH URL -- 🐟❌'
