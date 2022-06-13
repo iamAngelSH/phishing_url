@@ -132,12 +132,12 @@ def url_prediction():
     pred = model.predict(df).tolist()
 
     if 0 in pred:
-        t = f'##### Looks like {df.domain[0]} is not a PHISH URL -- 🐟❌'
+        t = f'##### {df.domain[0]} is not a PHISH URL -- 🐟❌'
         # df["Prediction"] = 'Not a Phish URL'
         st.markdown(t)
     else:
         # df["Prediction"] = 'Phish URL'
-        t = f'##### Looks like {df.domain[0]} is a PHISH URL -- 🐟✅'
+        t = f'##### {df.domain[0]} is a PHISH URL -- 🐟✅'
         st.markdown(t)
 
     st.markdown('---')
